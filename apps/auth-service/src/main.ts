@@ -1,14 +1,28 @@
 import express from 'express';
+import cors from 'cors';
+import { errorMiddleware } from '../../../packages/error-handler/error-middlware';
+import cookieParser from 'cookie-parser';
 
-const host = process.env.HOST ?? 'localhost';
-const port = process.env.PORT ? Number(process.env.PORT) : 3000;
 
 const app = express();
+const corsOptions = {
+  origin: ['http://localhost:3000'],
+  credentials: true,
+  allowHeaders:['Content-Type','Authorization']
+}
+app.use(cors(corsOptions))
+app.use(express.json());
+app.use(cookieParser());
+app.use(errorMiddleware);
 
 app.get('/', (req, res) => {
-    res.send({ 'message': 'Hello API'});
+  res.send({ message: 'Hello API' });
 });
 
-app.listen(port, host, () => {
-    console.log(`[ ready ] http://${host}:${port}`);
+const port=Number(process.env.PORT)|| 6001;
+const server=app.listen(port,()=>{
+    console.log(`Auth Service is  running at http://localhost:${port}/api`);
+})
+server.on('error',(err)=>{
+  console.log("Server error", err);
 });
