@@ -10,9 +10,6 @@ dotenv.config();
 
 const app = express();
 
-app.set("trust proxy", true); 
-
-
 const corsOptions = {
   origin: ['http://localhost:3000'],
   credentials: true,
