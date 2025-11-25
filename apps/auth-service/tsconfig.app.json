@@ -15,5 +15,8 @@
     "../../packages/**/*.js",
     "../../packages/**/*.tsx"
   ],
-  "exclude": []
+  "exclude": [
+    "dist",
+    "node_modules"
+  ]
 }

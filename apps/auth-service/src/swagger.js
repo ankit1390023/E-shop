@@ -11,7 +11,7 @@ const doc = {
     
 }
 
-const outputFile = "./swagger-output.json";
+const outputFile = "./assets/swagger-output.json";
 
 const endPointsFiles = ["./routes/auth.router.ts"]
 

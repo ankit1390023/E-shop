@@ -1,5 +1,5 @@
 {
-  "name": "@job-portal/api-gateway",
+  "name": "@e-shop/api-gateway",
   "version": "0.0.1",
   "private": true,
   "nx": {
@@ -83,15 +83,15 @@
           "build"
         ],
         "options": {
-          "buildTarget": "@job-portal/api-gateway:build",
+          "buildTarget": "@e-shop/api-gateway:build",
           "runBuildTargetDependencies": false
         },
         "configurations": {
           "development": {
-            "buildTarget": "@job-portal/api-gateway:build:development"
+            "buildTarget": "@e-shop/api-gateway:build:development"
           },
           "production": {
-            "buildTarget": "@job-portal/api-gateway:build:production"
+            "buildTarget": "@e-shop/api-gateway:build:production"
           }
         }
       }

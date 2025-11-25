@@ -4,12 +4,12 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Debug @job-portal/auth-service with Nx",
+      "name": "Debug @e-shop/auth-service with Nx",
       "runtimeExecutable": "npx",
       "runtimeArgs": [
         "nx",
         "serve",
-        "@job-portal/auth-service"
+        "@e-shop/auth-service"
       ],
       "env": {
         "NODE_OPTIONS": "--inspect=9229"
@@ -28,12 +28,12 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Debug @job-portal/api-gateway with Nx",
+      "name": "Debug @e-shop/api-gateway with Nx",
       "runtimeExecutable": "npx",
       "runtimeArgs": [
         "nx",
         "serve",
-        "@job-portal/api-gateway"
+        "@e-shop/api-gateway"
       ],
       "env": {
         "NODE_OPTIONS": "--inspect=9230"

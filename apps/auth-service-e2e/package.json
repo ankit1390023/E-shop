@@ -1,10 +1,10 @@
 {
-  "name": "@job-portal/auth-service-e2e",
+  "name": "@e-shop/auth-service-e2e",
   "version": "0.0.1",
   "private": true,
   "nx": {
     "implicitDependencies": [
-      "@job-portal/auth-service"
+      "@e-shop/auth-service"
     ],
     "targets": {
       "e2e": {
@@ -17,8 +17,8 @@
           "passWithNoTests": true
         },
         "dependsOn": [
-          "@job-portal/auth-service:build",
-          "@job-portal/auth-service:serve"
+          "@e-shop/auth-service:build",
+          "@e-shop/auth-service:serve"
         ]
       }
     }

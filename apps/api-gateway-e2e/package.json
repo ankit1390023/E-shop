@@ -1,10 +1,10 @@
 {
-  "name": "@job-portal/api-gateway-e2e",
+  "name": "@e-shop/api-gateway-e2e",
   "version": "0.0.1",
   "private": true,
   "nx": {
     "implicitDependencies": [
-      "@job-portal/api-gateway"
+      "@e-shop/api-gateway"
     ],
     "targets": {
       "e2e": {
@@ -17,8 +17,8 @@
           "passWithNoTests": true
         },
         "dependsOn": [
-          "@job-portal/api-gateway:build",
-          "@job-portal/api-gateway:serve"
+          "@e-shop/api-gateway:build",
+          "@e-shop/api-gateway:serve"
         ]
       }
     }

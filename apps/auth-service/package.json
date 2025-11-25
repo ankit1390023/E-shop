@@ -1,5 +1,5 @@
 {
-  "name": "@job-portal/auth-service",
+  "name": "@e-shop/auth-service",
   "version": "0.0.1",
   "private": true,
   "nx": {
@@ -20,7 +20,11 @@
           "main": "apps/auth-service/src/main.ts",
           "tsConfig": "apps/auth-service/tsconfig.app.json",
           "assets": [
-            "apps/auth-service/src/assets"
+            {
+              "input": "apps/auth-service/src/assets",
+              "glob": "**/*",
+              "output": "apps/auth-service/src/assets"
+            }
           ],
           "esbuildOptions": {
             "sourcemap": true,
@@ -83,15 +87,15 @@
           "build"
         ],
         "options": {
-          "buildTarget": "@job-portal/auth-service:build",
+          "buildTarget": "@e-shop/auth-service:build",
           "runBuildTargetDependencies": false
         },
         "configurations": {
           "development": {
-            "buildTarget": "@job-portal/auth-service:build:development"
+            "buildTarget": "@e-shop/auth-service:build:development"
           },
           "production": {
-            "buildTarget": "@job-portal/auth-service:build:production"
+            "buildTarget": "@e-shop/auth-service:build:production"
           }
         }
       }
